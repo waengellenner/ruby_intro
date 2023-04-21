@@ -20,9 +20,24 @@
 # puts "Tacos " + "are awesome "
 # puts "tacos" * 3
 # puts "tacos" + 3
+# puts "tacos" + 3.to_s
 
 # Variables
+# food = "tacos"
+# puts food
+
+# x = 5
+# y = 3
+# x = 10
+# y = 40
+# puts x + y
 
 # Combine strings and variables
+# x = 10
+# y = 40
+# puts "#{x+y} tacos"
 
 # String manipulation
+# puts "How are you today?".upcase
+
+# windows cntrl /
