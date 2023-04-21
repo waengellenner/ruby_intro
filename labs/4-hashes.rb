@@ -6,6 +6,7 @@ url = "https://api.coindesk.com/v1/bpi/currentprice.json"
 uri = URI(url)
 response = Net::HTTP.get(uri)
 bitcoin_data = JSON.parse(response)
+
 # ----------------------
 
 # To run this code, be sure your current working directory
@@ -29,4 +30,8 @@ bitcoin = gets.chomp
 bitcoin = bitcoin.to_f
 
 # 3. inspect the bitcoin_data hash
-# puts bitcoin_data
+usd_btc = bitcoin_data["bpi"]["USD"]["rate_float"]
+value = bitcoin * usd_btc
+puts "Bitcoin is valued at $#{usd_btc} USD."
+puts "Your Bitcoin is worth $#{value}."
+
